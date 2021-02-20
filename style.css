@@ -1,0 +1,183 @@
+/*----------------- AFFICHAGE GLOBAL ---------------------*/
+*{
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.mobile{
+    display: none;
+}
+
+body{
+    background-color: #181a1b;
+    position: relative;
+    margin: 0;
+}
+
+#container{
+    max-width: 1128px;
+    margin: 0 auto;
+    padding-top: 73.59px;
+    background-color: #1d1f20;
+}
+    /* Display */
+.disp-flex{
+    display: flex;
+}
+.inline-center{
+    justify-content: center;
+}
+.block-center{
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}
+.full-div{
+    width: 100%;
+}
+.full-div-height{
+    height: 100%;
+}
+
+.orange{
+    background-color: #df5d1c;
+    color: white;
+}
+.flex1{
+    flex: 1;
+}
+/*--------------------------------------------------------*/
+
+
+/*----------------- HEADER -------------------------------*/
+#banniere{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    height: 73.59px;
+    z-index: 1;
+}
+    /* NAV PRINCIPALE*/
+#navbar{
+    max-width: 1128px;
+    margin: 0 auto;
+}
+span[id="burger"]{
+    margin: 0.65em 0.5em 0.65em 1em;
+    cursor: pointer;
+    width: 28px;
+    height: 32px;
+}
+body header[id="banniere"] nav[class="desktop"]{
+    display: flex;
+    padding: 0em 1em;
+    max-width: 100%;
+    justify-content: flex-end;
+}
+body header[id="banniere"] nav[class="desktop"] a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 16px 32px;
+    text-transform: uppercase;
+}
+
+    /* NAV ALTERNATIVE */
+.navbar-alt{
+    position: fixed;
+    left: 0;
+    padding: 0 30px;
+    padding-top: 73.59px;
+    background-color: rgb(124, 124, 124);
+    width: 300px;
+    max-height: 100%;
+    min-height: 100%;
+
+    transition: transform 0.6s ease-in-out;
+    transform: translateX(-100%);
+}
+.navbar-alt.isOpen{
+    transform: translateX(0);
+}
+div[class="navbar-alt"] nav ul, div[class="navbar-alt isOpen"] nav ul{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    text-align: end;
+    text-transform: uppercase;
+    bottom: 50%;
+    right: 30px;
+    transform: translateY(50%);
+}
+div[class="navbar-alt"] nav ul a, div[class="navbar-alt isOpen"] nav ul a{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 1em 0 1em 0;
+}
+
+/*--------------------------------------------------------*/
+
+
+/*----------------- MAIN ---------------------------------*/
+
+/*--------------------------------------------------------*/
+
+
+/*----------------- FOOTER -------------------------------*/
+footer{
+    color: white;
+}
+footer section{
+    flex: 1;
+    text-align: center;
+}
+.square50{
+    height: 50px;
+    width: 50px;
+    margin: 0 1em;
+}
+footer p{
+    padding: 1em;
+    margin: 0;
+    flex: 1;
+}
+#footer-mail{
+    color: white;
+    margin: 0;
+}
+/*--------------------------------------------------------*/
+
+
+
+/*----------------- RESPONSIVE ---------------------------*/
+@media screen and (min-width: 866px){
+    .navbar-alt.isOpen{
+        transform: translateX(-100%);
+    }
+}
+@media screen and (max-width: 865px){
+    body header[id="banniere"] nav[class="desktop"] a{
+        margin: 16px;
+    }
+}
+@media screen and (max-width: 750px){
+    body header[id="banniere"] nav[class="desktop"]{
+        display: none;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+}
+/*--------------------------------------------------------*/
