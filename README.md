@@ -8,3 +8,6 @@ en HTML5, CSS3 et JavaScript.<br>
 Il sera composé, si j'y parviens, d'un effet de parallaxe au top de la page, d'une brève<br>
 description de moi, de mes compétences, de mon parcours de formations, de mes projets passés,<br>
 et d'une dernière catégorie contact (qui est d'ailleurs déjà fonctionnelle).
+<br><br>
+Changelog :<br>
+- Optimisation de la barre de navigation
