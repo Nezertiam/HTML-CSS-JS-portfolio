@@ -16,6 +16,7 @@ body{
     background-color: #181a1b;
     position: relative;
     margin: 0;
+    position: relative;
 }
 
 #container{
@@ -57,72 +58,42 @@ h1{
 
 /*----------------- HEADER -------------------------------*/
 #banniere{
-    position:fixed;
+    
+}
+    /* NAVBAR */
+#navbar{
+    margin: 0 auto;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 73.59px;
     z-index: 1;
 }
-    /* NAV PRINCIPALE*/
-#navbar{
-    max-width: 1128px;
-    margin: 0 auto;
-}
-span[id="burger"]{
+#burger{
     margin: 0.65em 0.5em 0.65em 1em;
     cursor: pointer;
     width: 28px;
     height: 32px;
 }
-body header[id="banniere"] nav[class="desktop"]{
+#navbar nav{
     display: flex;
     padding: 0em 1em;
     max-width: 100%;
     justify-content: flex-end;
 }
-body header[id="banniere"] nav[class="desktop"] a{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 16px 32px;
-    text-transform: uppercase;
-}
-
-    /* NAV ALTERNATIVE */
-.navbar-alt{
-    position: fixed;
-    left: 0;
-    padding: 0 30px;
-    padding-top: 73.59px;
-    background-color: rgb(124, 124, 124);
-    width: 300px;
-    max-height: 100%;
-    min-height: 100%;
-
-    transition: transform 0.6s ease-in-out;
-    transform: translateX(-100%);
-}
-.navbar-alt.isOpen{
-    transform: translateX(0);
-}
-div[class="navbar-alt"] nav ul, div[class="navbar-alt isOpen"] nav ul{
-    position: absolute;
-    margin: 0;
+#navbar nav li{
     padding: 0;
-    text-align: end;
-    text-transform: uppercase;
-    bottom: 50%;
-    right: 30px;
-    transform: translateY(50%);
+    list-style: none;
+    margin: 1em;
 }
-div[class="navbar-alt"] nav ul a, div[class="navbar-alt isOpen"] nav ul a{
+#navbar nav li a{
     color: white;
-    font-size: 25px;
     text-decoration: none;
+    font-size: 1.25em;
     font-weight: bold;
-    display: block;
-    padding: 1em 0 1em 0;
+    text-transform: uppercase;
 }
+
 
 /*--------------------------------------------------------*/
 
@@ -135,6 +106,12 @@ div[class="navbar-alt"] nav ul a, div[class="navbar-alt isOpen"] nav ul a{
 /*----------------- FOOTER -------------------------------*/
 footer{
     color: white;
+}
+.icon-foot{
+    font-size: 50px;
+    color: white;
+    text-decoration: none;
+    padding: 0 0.5em;
 }
 footer section{
     flex: 1;
@@ -159,25 +136,41 @@ footer p{
 
 
 /*----------------- RESPONSIVE ---------------------------*/
-@media screen and (min-width: 866px){
-    .navbar-alt.isOpen{
-        transform: translateX(-100%);
-    }
-}
-@media screen and (max-width: 865px){
-    body header[id="banniere"] nav[class="desktop"] a{
-        margin: 16px;
-    }
-}
-@media screen and (max-width: 750px){
-    body header[id="banniere"] nav[class="desktop"]{
-        display: none;
-    }
-    .desktop{
-        display: none;
-    }
+@media screen and (max-width: 835px){
     .mobile{
         display: block;
+    }
+
+        /* NAV ALTERNATIVE */
+    #navbar{
+        z-index: 1;
+    }
+    #navbar nav{
+        background-color: #4444447c;
+        display: block;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        transform: translateY(-150%);
+    }
+    #navbar nav li{
+        text-align: center;
+        margin: 1.75em;
+    }
+    #navbar nav.navPop{
+        transform: translateY(0%);
+    }
+    main.navIsOpen{
+        padding-top: 288px;
+    }
+    #burger.closeNav{
+        
+    }
+
+}
+@media screen and (max-width: 400px){
+    .icon-foot{
+        padding: 0 0.1em;
     }
 }
 /*--------------------------------------------------------*/
